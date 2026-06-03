@@ -2,6 +2,7 @@ package TermProject.MovieReservationSystem;
 
 import java.io.Serializable;
 
+// 캡슐화 및 상속 활용을 위한 최상위 사용자 추상 클래스
 public abstract class User implements Serializable {
     protected String id;       
     protected String password;

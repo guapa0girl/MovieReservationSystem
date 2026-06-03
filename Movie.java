@@ -2,7 +2,7 @@ package TermProject.MovieReservationSystem;
 
 import java.io.Serializable;
 
-// [요구사항 반영: 영화 카테고리(장르) 분리]
+// 영화 정보 DTO
 public class Movie implements Serializable {
     private String title;
     private String genre; // 공포, 코미디 등

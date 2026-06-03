@@ -2,7 +2,7 @@ package TermProject.MovieReservationSystem;
 
 import java.io.Serializable;
 
-// 파일 저장을 위해 Serializable 구현
+// 인터페이스를 구현한 실제 요금 계산 클래스 (파일 저장을 위해 Serializable 구현)
 public class StandardPricing implements PricingPolicy, Serializable {
     @Override
     public int calculatePrice(String ageGroup, String timeZone, boolean isPremiumSeat) {
@@ -18,9 +18,9 @@ public class StandardPricing implements PricingPolicy, Serializable {
             default: basePrice = 14000;
         }
 
-        // 2. 시간대별 할인/할증 (조조/심야 등 추가 확장을 대비해 파라미터 유지)
+        // 2. 시간대별 할인
         if (timeZone.equals("오전")) {
-            // 오전 타임 일괄 할인 예시 (경로/장애인은 기존 가격 유지)
+            // 오전 타임 일괄 할인 (단, 경로/장애인처럼 원래 싼 경우는 1만원보다 싸게 유지)
             basePrice = Math.min(basePrice, 10000); 
         }
 

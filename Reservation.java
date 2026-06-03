@@ -2,6 +2,7 @@ package TermProject.MovieReservationSystem;
 
 import java.io.Serializable;
 
+// 최종 예매 내역 DTO
 public class Reservation implements Serializable {
     private Customer customer;
     private Schedule schedule;
@@ -18,6 +19,9 @@ public class Reservation implements Serializable {
     public Customer getCustomer() { return customer; }
     public Schedule getSchedule() { return schedule; }
     public Seat getSeat() { return seat; }
+    
+    // 취소 시 환불 및 포인트 회수를 위해 결제금액 반환
+    public int getPrice() { return price; } 
 
     @Override
     public String toString() {

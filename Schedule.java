@@ -2,6 +2,7 @@ package TermProject.MovieReservationSystem;
 
 import java.io.Serializable;
 
+// 영화, 지점, 시간대, 상영관(좌석)을 하나로 묶는 스케줄 클래스
 public class Schedule implements Serializable {
     private Movie movie;
     private String branch;   // 상영관 지점 (중계점, 노원점)

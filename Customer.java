@@ -1,7 +1,8 @@
 package TermProject.MovieReservationSystem;
 
+// 일반 사용자 클래스
 public class Customer extends User {
-    private int points; 
+    private int points; // 멤버십 포인트
 
     public Customer(String id, String password, String name) {
         super(id, password, name);

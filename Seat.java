@@ -2,6 +2,7 @@ package TermProject.MovieReservationSystem;
 
 import java.io.Serializable;
 
+// 개별 좌석 상태 정보 클래스
 public class Seat implements Serializable {
     private String seatNumber; 
     private boolean isReserved;
